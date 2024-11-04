@@ -19,6 +19,9 @@
     .active-link {
       @apply relative after:absolute after:inset-y-0 after:-right-8 after:w-1.5 after:bg-[#f6d658] after:rounded-full;
     }
+    .primarybtn{
+      @apply p-2 rounded-md text-white bg-blue-500 hover:bg-blue-600
+    }
   
 
   }
