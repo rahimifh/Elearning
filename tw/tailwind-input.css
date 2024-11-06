@@ -16,9 +16,7 @@
 } */
 
 @layer components {
-    .active-link {
-      @apply relative after:absolute after:inset-y-0 after:-right-8 after:w-1.5 after:bg-[#f6d658] after:rounded-full;
-    }
+
     .primarybtn{
       @apply p-2 rounded-md text-white bg-blue-500 hover:bg-blue-600
     }
@@ -30,15 +28,10 @@
     .px-content {
       @apply xl:pr-72 xlg:pr-60  xl:pl-20;
     }
+
+  
   }
 
-@layer components {
-    .box-deck {
-      @apply gap-6 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 grid;
-    }
-
-
-  }
-.linear-background{
-    background-image: linear-gradient(145deg, rgba(70, 65, 65, 0) 30%, rgba(181, 217, 250, 0.65) 100%, rgba(47, 35, 35, 0) 100%);
+  .linear-background{
+    @apply bg-gradient-to-tr from-red-500 to-gray-700;
 }
