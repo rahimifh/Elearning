@@ -612,6 +612,10 @@ video {
   float: right;
 }
 
+.m-96 {
+  margin: 24rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -622,12 +626,104 @@ video {
   margin-bottom: 1rem;
 }
 
+.mr-20 {
+  margin-right: 5rem;
+}
+
+.mr-40 {
+  margin-right: 10rem;
+}
+
+.mr-48 {
+  margin-right: 12rem;
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
 
 .mt-40 {
   margin-top: 10rem;
+}
+
+.mr-56 {
+  margin-right: 14rem;
+}
+
+.mr-64 {
+  margin-right: 16rem;
+}
+
+.-mr-80 {
+  margin-right: -20rem;
+}
+
+.-mr-72 {
+  margin-right: -18rem;
+}
+
+.mr-\[600px\] {
+  margin-right: 600px;
+}
+
+.mr-\[500px\] {
+  margin-right: 500px;
+}
+
+.mr-\[400px\] {
+  margin-right: 400px;
+}
+
+.mr-36 {
+  margin-right: 9rem;
+}
+
+.mr-8 {
+  margin-right: 2rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mr-72 {
+  margin-right: 18rem;
+}
+
+.mr-52 {
+  margin-right: 13rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.mr-\[280px\] {
+  margin-right: 280px;
+}
+
+.mr-\[278px\] {
+  margin-right: 278px;
+}
+
+.mr-\[277px\] {
+  margin-right: 277px;
+}
+
+.mr-\[276px\] {
+  margin-right: 276px;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .flex {
@@ -650,6 +746,14 @@ video {
   height: 10rem;
 }
 
+.h-72 {
+  height: 18rem;
+}
+
+.h-\[20px\] {
+  height: 20px;
+}
+
 .h-\[500px\] {
   height: 500px;
 }
@@ -660,6 +764,10 @@ video {
 
 .h-auto {
   height: auto;
+}
+
+.h-\[22px\] {
+  height: 22px;
 }
 
 .min-h-screen {
@@ -678,6 +786,14 @@ video {
   width: 24rem;
 }
 
+.w-\[10px\] {
+  width: 10px;
+}
+
+.w-\[20px\] {
+  width: 20px;
+}
+
 .w-\[500px\] {
   width: 500px;
 }
@@ -686,8 +802,52 @@ video {
   width: 800px;
 }
 
+.w-\[900px\] {
+  width: 900px;
+}
+
 .w-screen {
   width: 100vw;
+}
+
+.w-\[50px\] {
+  width: 50px;
+}
+
+.w-\[30px\] {
+  width: 30px;
+}
+
+.w-\[32px\] {
+  width: 32px;
+}
+
+.w-\[18px\] {
+  width: 18px;
+}
+
+.w-\[33px\] {
+  width: 33px;
+}
+
+.w-\[23px\] {
+  width: 23px;
+}
+
+.w-\[24px\] {
+  width: 24px;
+}
+
+.w-\[12px\] {
+  width: 12px;
+}
+
+.w-\[28px\] {
+  width: 28px;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-3 {
@@ -772,6 +932,10 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .font-thin {
