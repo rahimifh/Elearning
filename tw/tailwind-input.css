@@ -26,13 +26,20 @@
     .exillinkblack{
       @apply p-2 text-gray-100 bg-gray-950 hover:bg-gray-900
     }
-  
+
+    .box{
+      @apply center rounded-2xl border;
+    }
+    
 
   }
 
 @layer utilities {
     .px-content {
       @apply xl:pr-72 xlg:pr-60  xl:pl-20;
+    }
+    .center{
+      @apply flex justify-center items-center;
     }
 
   
