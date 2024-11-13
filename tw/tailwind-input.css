@@ -29,13 +29,20 @@
     .footerlink{
       @apply p-2 text-gray-300 hover:underline 
     }
-  
+
+    .box{
+      @apply center rounded-2xl border;
+    }
+    
 
   }
 
 @layer utilities {
     .px-content {
       @apply xl:pr-72 xlg:pr-60  xl:pl-20;
+    }
+    .center{
+      @apply flex justify-center items-center;
     }
 
   
