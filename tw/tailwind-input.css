@@ -21,15 +21,23 @@
       @apply p-2 rounded-md text-white bg-blue-500 hover:bg-blue-600
     }
     .exillinkwhite{
-      @apply p-2 text-center border border-black text-black bg-white hover:bg-gray-400
+      @apply p-2 text-center font-medium text-[20px] border border-black text-black bg-white hover:bg-gray-400
     }
     .exillinkblack{
-      @apply p-2 text-center text-gray-100 bg-gray-950 hover:bg-gray-900
+      @apply p-2 text-center font-medium text-[20px] text-white bg-gray-800 hover:bg-gray-700
     }
     .footerlink{
       @apply p-2 text-gray-300 hover:underline 
     }
-
+    .footerlinkblue{
+      @apply p-2 text-blue-300 hover:underline 
+    }
+    .primarylink{
+      @apply p-2  text-gray-900 hover:text-purple-500
+    }
+    .primarylinkpurple{
+      @apply p-2  text-purple-600 hover:text-purple-950
+    }
     .box{
       @apply center rounded-2xl border;
     }
