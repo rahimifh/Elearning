@@ -4,6 +4,12 @@ module.exports = {
   content: ["./src/**/*.{html, js}"],
   theme: {
     extend: {
+      boxShadow:{
+        '3xl': '5px 35px 60px 0 rgba(0, 0, 0, 0.5)',
+      },
+      blur:{
+        xblur: '2px',
+      },
       maxWidth: {
         xxs: "18rem",
         lxxs: "15rem",
