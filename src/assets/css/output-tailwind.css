@@ -653,6 +653,20 @@ video {
   justify-content: center;
 }
 
+.primarylinkpurplebold {
+  padding: 0.5rem;
+  font-size: 30px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(147 51 234 / var(--tw-text-opacity));
+  text-decoration-line: underline;
+}
+
+.primarylinkpurplebold:hover {
+  --tw-text-opacity: 1;
+  color: rgb(59 7 100 / var(--tw-text-opacity));
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -703,6 +717,10 @@ video {
 
 .top-44 {
   top: 11rem;
+}
+
+.left-2 {
+  left: 0.5rem;
 }
 
 .-z-20 {
@@ -815,8 +833,32 @@ video {
   margin-top: 2rem;
 }
 
-.mr-6 {
-  margin-right: 1.5rem;
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
+.mr-60 {
+  margin-right: 15rem;
+}
+
+.mr-80 {
+  margin-right: 20rem;
+}
+
+.mr-\[360px\] {
+  margin-right: 360px;
+}
+
+.mr-\[400px\] {
+  margin-right: 400px;
+}
+
+.mr-\[600px\] {
+  margin-right: 600px;
+}
+
+.mr-\[550px\] {
+  margin-right: 550px;
 }
 
 .flex {
@@ -895,6 +937,10 @@ video {
   height: 29px;
 }
 
+.h-\[48px\] {
+  height: 48px;
+}
+
 .h-\[500px\] {
   height: 500px;
 }
@@ -911,22 +957,6 @@ video {
   height: 100vh;
 }
 
-.h-3 {
-  height: 0.75rem;
-}
-
-.h-60 {
-  height: 15rem;
-}
-
-.h-36 {
-  height: 9rem;
-}
-
-.h-14 {
-  height: 3.5rem;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -937,6 +967,10 @@ video {
 
 .w-10\/12 {
   width: 83.333333%;
+}
+
+.w-2\/5 {
+  width: 40%;
 }
 
 .w-20 {
@@ -1019,26 +1053,6 @@ video {
   width: 100vw;
 }
 
-.w-6 {
-  width: 1.5rem;
-}
-
-.w-80 {
-  width: 20rem;
-}
-
-.w-4\/5 {
-  width: 80%;
-}
-
-.w-3\/5 {
-  width: 60%;
-}
-
-.w-2\/5 {
-  width: 40%;
-}
-
 .basis-1\/2 {
   flex-basis: 50%;
 }
@@ -1069,6 +1083,10 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
@@ -1138,16 +1156,16 @@ video {
   overflow-x: scroll;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .rounded-sm {
   border-radius: 0.125rem;
 }
 
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.rounded-3xl {
-  border-radius: 1.5rem;
 }
 
 .rounded-tr-full {
@@ -1158,16 +1176,16 @@ video {
   border-width: 1px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border-4 {
   border-width: 4px;
 }
 
 .border-8 {
   border-width: 8px;
-}
-
-.border-2 {
-  border-width: 2px;
 }
 
 .border-x-4 {
@@ -1362,6 +1380,10 @@ video {
   padding: 2rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -1389,10 +1411,6 @@ video {
 
 .text-center {
   text-align: center;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .text-justify {
@@ -1509,6 +1527,10 @@ video {
 
 .decoration-8 {
   text-decoration-thickness: 8px;
+}
+
+.opacity-25 {
+  opacity: 0.25;
 }
 
 .ring-8 {
