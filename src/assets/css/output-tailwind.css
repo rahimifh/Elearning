@@ -849,6 +849,14 @@ video {
   margin-top: 2rem;
 }
 
+.mt-96 {
+  margin-top: 24rem;
+}
+
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
