@@ -1,22 +1,23 @@
-# name = "nastaran"
-# def parent():
-#     def local():
-#         name = "Hasti"
+name = "nastaran"
+def parent():
+    def local():
+        name = "Hasti"
         
-#     def Nonelocal():
-#         nonlocal name
-#         name = "Reza"
-#     def Global():
-#         global name
-#         name = "Ahmad"
-#     name = "Zahra"
-#     local()
-#     print(name)
-#     Nonelocal()
-#     print(name)
-#     Global()
+    def Nonelocal():
+        nonlocal name
+        name = "Reza"
+        print(name)
+    def Global():
+        global name
+        name = "Ahmad"
+    name = "Zahra"
+    local()
+    # print(name)
+    Nonelocal()
+    # print(name)
+    Global()
 
-# parent()
+parent()
 # print(name)
 
 # class myclass:
