@@ -16,13 +16,6 @@ class Subject(models.Model):
        return self.title
     
 
-class Category(models.Model):
-    name = models.CharField(max_length=50)
-
-class Product(models.Model):
-    category = models.ForeignKey(Category, related_name="product", on_delete=models.CASCADE)
-    name = models.CharField(max_length=50)
-    praic = models.IntegerField()
 
 class Course(models.Model):
     owner = models.ForeignKey(User,related_name='courses_created',on_delete=models.CASCADE)
@@ -42,6 +35,7 @@ class Module(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     order = OrderField(blank=True, for_fields=['course'])
+    
 
     class Meta:
         ordering = ['order'] 
