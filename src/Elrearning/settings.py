@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-**_m=akc_wu=ob$9mpm4k#()%18c6zzn=o=*3je@$5g#(!%2-5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     #my app 
     'courses.apps.CoursesConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -83,6 +84,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
