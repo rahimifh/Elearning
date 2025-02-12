@@ -40,7 +40,9 @@ INSTALLED_APPS = [
 
 
     #my app 
-    'courses.apps.CoursesConfig',
+    'blog.apps.BlogConfig',
+    
+   
     
 ]
 
