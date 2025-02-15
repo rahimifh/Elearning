@@ -12,14 +12,20 @@ def post_list(request):
             )
 
 
-def post_detail(request, id):
+def post_detail(request, year, month, day, post):
     post = get_object_or_404(
-        Post,
-        id=id,
-        status=Post.Status.PUBLISHED
-        )
+            Post,
+            status=Post.Status.PUBLISHED,
+            slug=post,
+            publish__year=year,
+            publish__month=month,
+            publish__day=day
+            )
     return render(
         request,
         'blog/post/detail.html',
         {'post': post}
         )
+
+def components(request):
+    return render(request, 'components.html')
