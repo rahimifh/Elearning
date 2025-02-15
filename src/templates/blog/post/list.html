@@ -2,7 +2,7 @@
 {% block title %}My Blog{% endblock %}
 
 {% block content %}
-<div class="bg-gradient-to-b from-purple-50 to-purple-100 min-h-screen p-8">
+<div class="bg-gradient-to-b from-purple-50 to-purple-100 min-h-[80vh] p-8">
     <div class="max-w-6xl mx-auto">
     
         <h1 class="text-5xl font-bold text-center text-purple-900 mb-12 transform hover:scale-105 transition-transform duration-300">
@@ -15,7 +15,7 @@
             <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 border border-purple-200">
              
                 <h2 class="text-2xl font-bold text-purple-700 hover:text-purple-900 mb-4">
-                    <a href="{% url 'blog:post_detail' post.id %}">
+                    <a href="{{post.get_absolute_url}}">
                         {{ post.title }}
                     </a>
                 </h2>
@@ -31,7 +31,7 @@
                 </div>
 
              
-                <a href="{% url 'blog:post_detail' post.id %}" class="inline-block bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-2 rounded-full hover:from-purple-600 hover:to-purple-700 transition-all duration-300">
+                <a  href="{{post.get_absolute_url}}" class="inline-block bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-2 rounded-full hover:from-purple-600 hover:to-purple-700 transition-all duration-300">
                     ادامه مطلب
                 </a>
             </div>
@@ -39,4 +39,5 @@
         </div>
     </div>
 </div>
+{% include "components/pagination.html" with page=posts %}
 {% endblock %}
