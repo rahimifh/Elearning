@@ -9,8 +9,9 @@
 #     """
 #         this function return  name of student
 #     """
-#     print(name)
-#     print(kwargs)
+#     # print(name)
+#     # print(kwargs)
+#     print(args)
 #     for i in args:
 #         print(i)
 
@@ -18,29 +19,30 @@
 # print(example.__doc__)
 
 # ************stack *************
-# stack = []
+stack = []
 
-# def addtoStack(obj):
-#     stack.append(obj)
+def addtoStack(obj):
+    stack.append(obj)
 
-# def getitem():
-#     return stack.pop()
+def getitem():
+    return stack.pop()
 
-# for i in range(10):
-#     addtoStack(i)
-#     print(stack)
+for i in range(10):
+    addtoStack(i)
+    print(stack)
 
-# for i in range(10):
-#     x = getitem()
-#     print(x)
+for i in range(10):
+    x = getitem()
+    print(stack)
 
 
 # *************Queues**************
-# from collections import deque
-# queue = deque(["Ali", "Reza", "behroz", "negin", "Ali"])
+from collections import deque
+queue = deque(["Ali", "Reza", "behroz", "negin", "Ali"])
 
 # queue.append("Arash")
 # print(queue.popleft())
+
 # print(queue.popleft())
 # print(queue.popleft())
 # print(queue.popleft())
@@ -49,10 +51,10 @@
 # print(queue)
 
 
-def intro(name, *args, **kwargs):
-    print(name)
-    print(args)
-    print(kwargs)
+# def intro(name, *args, **kwargs):
+#     print(name)
+#     print(args)
+#     print(kwargs)
 
 
-intro("sara", "naseri", "Ali", "Hossin", Test="hjbasdjfb", test2=5558)
+# intro("sara", "naseri", "Ali", "Hossin", Test="hjbasdjfb", test2=5558)

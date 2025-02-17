@@ -3,13 +3,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-      
+      -----------------------
         <meta charset="utf-8" />
         <title>{% block title %}Educa{% endblock %}</title>
-        <link href="{% static 'css/output-tailwind.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/output-tailwind.css' %}?v=2" rel="stylesheet">
                     
     </head>
-    <body>
+    <body class="bg-green-600">
         <div id="header">
             <a href="/" class="logo">Educa</a>
             <ul class="menu">
