@@ -26,6 +26,7 @@ class Post(models.Model):
     published = PublishedManager() # Our custom manager.
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
+    image = models.ImageField(upload_to="postimage/")
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(
@@ -52,6 +53,8 @@ class Post(models.Model):
         )
     
   
+
+
     
 
 
