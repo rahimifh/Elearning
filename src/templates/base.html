@@ -6,6 +6,7 @@
       -----------------------
         <meta charset="utf-8" />
         <title>{% block title %}Educa{% endblock %}</title>
+
         <link href="{% static 'css/output-tailwind.css' %}?v=2" rel="stylesheet">
                     
     </head>
@@ -15,12 +16,12 @@
             <ul class="menu">
                 {% if request.user.is_authenticated %}
                     <li>
-                        <form action="{% url "logout" %}" method="post">
+                        <form action="{% url 'logout' %}" method="post">
                             <button type="submit">Sign out</button>
                         </form>
                     </li>
                 {% else %}
-                    <li><a href="{% url "login" %}">Sign in</a></li>
+                    <li><a href="{% url 'login' %}">Sign in</a></li>
                 {% endif %}
             </ul>
         </div>
