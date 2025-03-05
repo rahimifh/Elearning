@@ -4,12 +4,15 @@
 {% block content %}
 <div class=" min-h-[80vh] p-8">
     <div class="max-w-6xl mx-auto">
-    
+        <a href="{% url 'blog:post_list'}"></a>
         <h1 class="text-5xl font-bold text-center text-purple-900 mb-12 transform hover:scale-105 transition-transform duration-300">
            مجله من 
         </h1>
 
-      
+
+        {% if tag %}
+        <h2>Posts tagged with "{{ tag.name }}"</h2>
+        {% endif %}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {% for post in posts %}
             <div>
@@ -26,7 +29,11 @@
                         </a>
                     </h2>
 
-                
+                    {% for tag in post.tags.all %}
+                     <a href="{% url 'blog:post_by_tag' tag.slug %}">
+                        {{ tag.name }}
+                        </a>{% if not forloop.last %}, {% endif %}
+                        {% endfor %}
                     <p class="text-sm text-purple-500 mb-4">
                         Published {{ post.publish }} by <span class="font-medium text-purple-700">{{ post.author }}</span>
                     </p>
@@ -47,6 +54,6 @@
         </div>
     </div>
 </div>
-{% comment %} {% include "components/pagination.html" with page=posts %} {% endcomment %}
-{% include "components/pagination.html" with page=page_obj %}
+{% include "components/pagination.html" with page=posts %}
+
 {% endblock %}
