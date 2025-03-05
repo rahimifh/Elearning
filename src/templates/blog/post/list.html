@@ -4,12 +4,16 @@
 {% block content %}
 <div class="min-h-[80vh] p-8 bg-gradient-to-b from-purple-50 to-white h-[800px]">
     <div class="max-w-6xl mx-auto">
+
     
         <h1 class="text-4xl md:text-5xl font-[YekanBakh] text-center bg-gradient-to-l from-purple-600 to-pink-600 bg-clip-text text-transparent mb-12 animate-fade-in-down h-[100px]">
             ✍️ مجله من
         </h1>
-
+        {% if tag %}
+        <h2>Posts tagged with "{{ tag.name }}"</h2>
+        {% endif %}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 h-[400px]">
+
             {% for post in posts %}
             <div class="group relative flex flex-col">
                 <!-- Image Container -->
@@ -46,8 +50,20 @@
                         </a>
                     </h2>
 
+                
+                    <div class="text-gray-700 leading-relaxed mb-4">
+
                     <!-- Excerpt -->
                     <div class="text-gray-600 text-sm leading-relaxed mb-4 font-[YekanBakhLight] line-clamp-3">
+                        {% for tag in post.tags.all %}
+                        <a href="{% url 'blog:post_by_tag' tag.slug %}">
+                           {{ tag.name }}
+                           </a>{% if not forloop.last %}, {% endif %}
+                           {% endfor %}
+                       <p class="text-sm text-purple-500 mb-4">
+                           Published {{ post.publish }} by <span class="font-medium text-purple-700">{{ post.author }}</span>
+                       </p>
+
                         {{ post.body|truncatewords:30|linebreaks }}
                     </div>
 
@@ -70,5 +86,7 @@
     </div>
 </div>
 
-{% include "components/pagination.html" with page=page_obj %}
+{% include "components/pagination.html" with page=posts %}
+
+
 {% endblock %}
