@@ -2,7 +2,7 @@
 {% block title %}مجله من {% endblock %}
 
 {% block content %}
-<div class="min-h-[80vh] p-8 bg-gradient-to-b from-purple-50 to-white h-[800px]">
+<div class="min-h-screen p-8 bg-gradient-to-b from-purple-50 to-white h-auto">
     <div class="max-w-6xl mx-auto">
 
     
@@ -12,7 +12,7 @@
         {% if tag %}
         <h2>Posts tagged with "{{ tag.name }}"</h2>
         {% endif %}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 h-[400px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 h-auto">
 
             {% for post in posts %}
             <div class="group relative flex flex-col">
@@ -81,12 +81,14 @@
                     </div>
                 </div>
             </div>
+            </div>
             {% endfor %}
-        </div>
+       
     </div>
+    {% include "components/pagination.html" with page=posts %}
 </div>
 
-{% include "components/pagination.html" with page=posts %}
+
 
 
 {% endblock %}

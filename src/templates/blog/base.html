@@ -1,15 +1,33 @@
 {% load static %}
+{% load blog_tags %}
 <!DOCTYPE html>
 <html>
 <head>
 <title>{% block title %}{% endblock %}</title>
-<link href="{% static 'css/output-tailwind.css' %}?v=2" rel="stylesheet">
+<link href="{% static 'css/output-tailwind.css' %}?v=3" rel="stylesheet">
 </head>
     <body class="bg-gradient-to-b  from-purple-50 to-purple-100  ">
     <div id="content">
         {% block content %}
         
         {% endblock %}
+        <h3>Latest posts</h3>
+        {% show_latest_posts 3 %}
+        <div>
+            <p>
+
+                {% total_posts %}
+            </p>
+        </div>
+        <h3>Most commented posts</h3>
+        {% get_most_commented_posts 3 as p_posts %}
+        <ul>
+        {% for post in p_posts %}
+        <li>
+        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+        </ul>
 
     </body>
 </html>
