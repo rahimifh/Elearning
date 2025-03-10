@@ -1,15 +1,92 @@
 {% load static %}
+{% load blog_tags %}
 <!DOCTYPE html>
-<html>
+<html dir="rtl">
 <head>
-<title>{% block title %}{% endblock %}</title>
-<link href="{% static 'css/output-tailwind.css' %}?v=2" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'css/output-tailwind.css' %}?v=4" rel="stylesheet">
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet">
 </head>
-    <body class="bg-gradient-to-b  from-purple-50 to-purple-100  ">
-    <div id="content">
-        {% block content %}
+<body class="bg-gradient-to-b from-purple-50 to-purple-100 font-vazir">
+    <div class="flex min-h-screen">
         
-        {% endblock %}
+        <aside class="w-80 bg-gradient-to-b from-purple-100 to-purple-50 shadow-2xl border-r border-purple-200 fixed h-screen p-6 flex flex-col justify-between pt-20">
+            
+            <div class="mb-12 text-center relative group ">
+                <div class="absolute -inset-2 bg-purple-500/10 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="bg-gradient-to-r from-purple-500 to-pink-500 p-4 rounded-2xl shadow-lg inline-block relative transform transition-all hover:scale-105 ">
+                    <h1 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-white h-[50px]">
+                        🌊موج پست
+                    </h1>
+                </div>
+            </div>
 
-    </body>
+           
+            <div class="space-y-8 flex-1 overflow-y-auto pb-8 scrollbar-thin scrollbar-thumb-purple-200 scrollbar-track-purple-50">
+                
+                <div class="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg border border-purple-50 hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center mb-4 space-x-3">
+                        <div class="p-3 rounded-lg bg-purple-500/10">
+                            📅
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-700">داغ ترین پست ها</h3>
+                    </div>
+                    <div class="space-y-3">
+                        {% show_latest_posts 3 %}
+                    </div>
+                </div>
+
+               
+                <div class="relative bg-purple-600 p-6 rounded-xl overflow-hidden">
+                    <div class="absolute inset-0 bg-noise opacity-10"></div>
+                    <div class="relative text-center">
+                        <div class="text-5xl font-bold text-white mb-2 animate-pulse">
+                            {% total_posts %}
+                        </div>
+                        <p class="text-purple-100 font-medium tracking-wide">پست های ارزشمند</p>
+                    </div>
+                </div>
+
+                
+                <div class="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg border border-purple-50">
+                    <div class="flex items-center mb-4 space-x-3">
+                        <div class="p-3 rounded-lg bg-rose-500/10">
+                            💬
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-700">محبوب ترین پست ها</h3>
+                    </div>
+                    <ul class="space-y-3">
+                    {% get_most_commented_posts 3 as p_posts %}
+                    {% for post in p_posts %}
+                        <li class="group relative pl-4">
+                            <div class="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <a href="{{ post.get_absolute_url }}" class="flex items-center text-gray-600 hover:text-purple-600 transition-colors duration-300">
+                                <span class="ml-2 transform transition-transform duration-300 group-hover:translate-x-2">→</span>
+                                <span class="truncate">{{ post.title }}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+           
+            <div class="border-t border-purple-200 pt-6 mt-4">
+                <p class="text-center text-sm text-purple-400 flex items-center justify-center gap-2">
+                    طراحی شده با 
+                    <span class="animate-pulse">❤️</span>
+                    توسط تیم ما
+                </p>
+            </div>
+        </aside>
+
+        
+        <main class="flex-1 mr-96 overflow-y-auto h-screen ">
+            <div>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
+    </div>
+</body>
 </html>

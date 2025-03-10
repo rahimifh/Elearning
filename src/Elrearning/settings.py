@@ -41,6 +41,11 @@ INSTALLED_APPS = [
 
     #my app 
     'blog.apps.BlogConfig',
+    'core.apps.CoreConfig',
+
+
+    #third party
+    'taggit',
     
    
     
@@ -76,6 +81,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Elrearning.wsgi.application'
 
+TAGGIT_CASE_INSENSITIVE = False
+TAGGIT_STRIP_UNICODE_WHEN_SLUGIFYING = True
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
